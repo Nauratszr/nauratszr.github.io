@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal Barisan Geometri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 100px;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            padding: 8px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#materi">Materi</a></li>
+            <li><a href="#latihan" onclick="showExercise()">Latihan Soal</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+        </ul>
+    </nav>
+    <div class="container" id="materi">
+        <h2>Materi Barisan Geometri</h2>
+        <!-- Isi materi disini -->
+    </div>
+    <div class="container" id="latihan" class="hidden">
+        <h2>Latihan Soal Barisan Geometri</h2>
+        <form id="geometric-sequence-form">
+            <label for="first-term">Suku Pertama:</label>
+            <input type="text" id="first-term" name="first-term">
+            <label for="ratio">Rasio:</label>
+            <input type="text" id="ratio" name="ratio">
+            <label for="position">Posisi Suku ke-n:</label>
+            <input type="text" id="position" name="position">
+            <input type="submit" value="Cek Jawaban">
+        </form>
+        <div id="result"></div>
+    </div>
+    <div class="container" id="games">
+        <h2>Games</h2>
+        <!-- Isi games disini -->
+    </div>
+    <div class="container" id="tentang">
+        <h2>Tentang</h2>
+        <!-- Isi tentang disini -->
+    </div>
+
+    <script>
+        function showExercise() {
+            var latihan = document.getElementById('latihan');
+            latihan.classList.remove('hidden');
+        }
+
+        document.getElementById('geometric-sequence-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var firstTerm = parseFloat(document.getElementById('first-term').value);
+            var ratio = parseFloat(document.getElementById('ratio').value);
+            var position = parseInt(document.getElementById('position').value);
+            
+            var nthTerm = firstTerm * Math.pow(ratio, position - 1);
+
+            document.getElementById('result').innerHTML = "<p>Suku ke-" + position + " adalah: " + nthTerm + "</p>";
+        });
+    </script>
+</body>
+</html>
