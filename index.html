@@ -3,59 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan Soal Barisan Geometri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-        h2 {
-            color: #333;
-        }
-        form {
-            margin-top: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        input[type="text"] {
-            width: 100px;
-            padding: 5px;
-        }
-        input[type="submit"] {
-            padding: 8px 15px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <title>Barisan dan Deret Aritmetika</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="#materi">Materi</a></li>
-            <li><a href="#latihan" onclick="showExercise()">Latihan Soal</a></li>
+            <li><a href="#latihan">Latihan Soal</a></li>
             <li><a href="#games">Games</a></li>
             <li><a href="#tentang">Tentang</a></li>
         </ul>
     </nav>
     <div class="container" id="materi">
-        <h2>Materi Barisan Geometri</h2>
-        <!-- Isi materi disini -->
+        <h2>Materi Barisan dan Deret Aritmetika</h2>
+        <p>Barisan aritmatika adalah baris yang nilai setiap sukunya didapatkan dari suku sebelumnya
+            melalui penjumlahan atau pengurangan dengan suatu bilangan. Selisih atau beda antara nilai
+            suku-suku yang berdekatan selalu sama yaitu b. Nilai suku pertama dilambangkan dengan a.
+            </p>
+        <p>Deret aritmatika adalah penjumlahan suku-suku dari barisan aritmatika.
+            Penjumlahan dari suku pertama sampai suku ke-n barisan aritmatika dapat dihitung dengan
+            rumus berikut. </p>
     </div>
-    <div class="container" id="latihan" class="hidden">
-        <h2>Latihan Soal Barisan Geometri</h2>
+    <div class="container" id="latihan">
+        <h2>Latihan Soal</h2>
+        <h3>Latihan Soal Barisan Aritmetika</h3>
         <form id="geometric-sequence-form">
             <label for="first-term">Suku Pertama:</label>
             <input type="text" id="first-term" name="first-term">
@@ -75,13 +47,8 @@
         <h2>Tentang</h2>
         <!-- Isi tentang disini -->
     </div>
-
+    
     <script>
-        function showExercise() {
-            var latihan = document.getElementById('latihan');
-            latihan.classList.remove('hidden');
-        }
-
         document.getElementById('geometric-sequence-form').addEventListener('submit', function(event) {
             event.preventDefault();
             
